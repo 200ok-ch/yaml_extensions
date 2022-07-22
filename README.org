@@ -39,9 +39,6 @@ YAML module to extend its functionality.
 Deep Merge any key value list by replacing YAML's regular Merge Key
 =<<= with =<<<=. Example:
 
-#+BEGIN_columns
-#+ATTR_HTML: :width 50%
-#+BEGIN_column
 #+begin_src yaml
 defaults: &DEFAULTS
   hello: world
@@ -55,10 +52,9 @@ main:
     is:
      somewhat: deep
 #+end_src
-#+END_column
 
-#+ATTR_HTML: :width 50%
-#+BEGIN_column
+will be interpreted as
+
 #+begin_src yaml
 defaults:
   hello: world
@@ -73,16 +69,11 @@ main:
       even: deeper
   hello: world
 #+end_src
-#+END_column
-#+END_columns
 
 This does not acutally patch the parser, but runs a transformation on
 the already parse data structure. Multiple deep merges can be achieved
 by appending digits to =<<<=. Exmaple:
 
-#+BEGIN_columns
-#+ATTR_HTML: :width 50%
-#+BEGIN_column
 #+begin_src yaml
 defaults: &DEFAULTS
   hello: world
@@ -102,10 +93,9 @@ main:
     is:
      somewhat: deep
 #+end_src
-#+END_column
 
-#+ATTR_HTML: :width 50%
-#+BEGIN_column
+will be interpreted as
+
 #+begin_src yaml
 defaults:
   hello: world
@@ -125,8 +115,6 @@ main:
       even: deeper, i tell you
   hello: world
 #+end_src
-#+END_column
-#+END_columns
 
 ** Development
    :PROPERTIES:

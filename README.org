@@ -33,8 +33,12 @@ Or install it yourself as:
    :CUSTOM_ID: usage
    :END:
 
-Just ~require 'yaml_extensions'~. For now this will [[https://twitter.com/dhh/status/813075241236762624][freedom patch]] the
+Just require =yaml_extensions=. For now this will [[https://twitter.com/dhh/status/813075241236762624][freedom patch]] the
 YAML module to extend its functionality.
+
+#+begin_src ruby
+require 'yaml_extensions'
+#+end_src
 
 Deep Merge any key-value-list by replacing YAML's regular Merge Key
 =<<= with =<<<=. Example:
